@@ -31,7 +31,6 @@ body {
   font-optical-sizing: auto;
   background-color: var(--light-pink);
   background-image: url(/images/background-pattern-desktop.svg);
-  background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
   left: 50%;
