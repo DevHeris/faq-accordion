@@ -121,7 +121,11 @@ header span {
   }
 
   .items {
-    padding-inline: 0.5em;
+    padding-inline: 0em;
+  }
+
+  .item {
+    border-radius: 0;
   }
 }
 
