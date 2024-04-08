@@ -119,6 +119,10 @@ header span {
   .question {
     grid-template-columns: 7fr 1fr;
   }
+
+  .items {
+    padding-inline: 0.5em;
+  }
 }
 
 @media screen and (min-width: 400px) {
