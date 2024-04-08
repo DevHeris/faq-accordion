@@ -30,7 +30,7 @@ img {
 body {
   font-optical-sizing: auto;
   background-color: var(--light-pink);
-  background-image: url(assets/images/background-pattern-desktop.svg);
+  background-image: url(/images/background-pattern-desktop.svg);
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -107,7 +107,7 @@ header span {
 
 @media screen and (max-width: 620px) {
   body {
-    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-image: url(/images/background-pattern-mobile.svg);
   }
 
   .accordion {
