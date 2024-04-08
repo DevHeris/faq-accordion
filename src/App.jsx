@@ -44,7 +44,7 @@ function Accordion() {
   return (
     <section className="accordion">
       <header>
-        <img src="./src/assets/images/icon-star.svg" alt="star" />
+        <img src="/images/icon-star.svg" alt="star" />
         <span>FAQs</span>
       </header>
       <main>
@@ -71,7 +71,7 @@ function AccordionItem({ faq, onClick, curOpen }) {
         <span>{faq.question}</span>
         <img
           className="icon"
-          src={`./src/assets/images/icon-${isOpen ? "minus" : "plus"}.svg`}
+          src={`/images/icon-${isOpen ? "minus" : "plus"}.svg`}
           alt="icon"
         />
       </h4>
