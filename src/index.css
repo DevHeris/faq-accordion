@@ -1,68 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --fw-normal: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Style reset */
+::after,
+*,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }
-a:hover {
-  color: #535bf2;
+
+img {
+  /* display: block; */
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-  margin: 0;
+  font-optical-sizing: auto;
+  background-color: var(--light-pink);
+  background-image: url(assets/images/background-pattern-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+}
+
+.accordion {
+  --max-width: 40em;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - var(--padding) * 1);
+  margin-inline: auto;
+  background-color: var(--white);
+  margin-top: 15em;
+  border-radius: 1em;
+  position: relative;
+  left: -50%;
+}
+
+.accordion header {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  padding: 2em 1em 0 1.5em;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header img {
+  margin-inline: 1em;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+header span {
+  font-weight: 600;
+  font-size: 3.4em;
+  color: var(--dark-purple);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+ul {
+  list-style: none;
+  padding-inline: 2.5em;
+}
+
+.item {
+  margin: 1.5em 0;
+  -moz-box-shadow: 0 0 50px var(--light-pink);
+  -webkit-box-shadow: 0 0 50px var(--light-pink);
+  box-shadow: 0 0 50px var(--light-pink);
+  padding: 0.5em;
+  border-radius: 0.9em;
+}
+
+.question {
+  display: grid;
+  grid-template-columns: 5fr 0.3fr;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.question span {
+  font-size: 1.1em;
+  color: var(--dark-purple);
+  font-weight: 600;
+}
+
+.answer {
+  font-size: 0.9em;
+  color: var(--grayish-purple);
+  padding-bottom: 1em;
 }
